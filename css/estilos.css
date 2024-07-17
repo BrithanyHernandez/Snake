@@ -1,0 +1,53 @@
+*{  /*selector universal*/
+    font-family: "Share Tech Mono", monospace;
+}
+
+
+#board, .boardInfo{
+    max-width: 500px;   /*ancho*/
+
+}
+
+#board{
+    display: grid;  /*el div se comporta como una cuadricula*/
+    grid-template-columns: repeat(10, 1fr); /*crea 10 columnas, divide 500px/10=50px cada cuadro */
+    border: #0d9536 solid 30px;
+
+}
+
+#start, .boardInfo{
+    font-size: 25px;
+}
+
+#gameOver{
+    display: none;  /*se oculta completamente de la pagina, no ocupa espacio*/
+}
+
+.boardInfo{
+    display: flex;  /* caja flexible*/
+    justify-content: space-between; /*1er elemento se alinea al inicio y el último al final, con espacio igual entre los 2*/
+    margin-top: 10px;
+}
+
+#start{
+    background-color: #f35a69;
+    border: black 2px solid;
+    color: white;
+}
+
+#scoreBoard{
+    display: inline-flex;
+}
+.square{
+    aspect-ratio: 1;
+}
+.emptySquare{
+    background-color: #29db5e;
+}
+.snakeSquare{
+    border: rgb(5, 99, 188) solid 4px;
+    background-color: rgb(20, 122, 218); 
+}
+.foodSquare{
+    background-color:#f35a69 ;
+}
